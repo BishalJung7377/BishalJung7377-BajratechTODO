@@ -1,0 +1,24 @@
+.titlecard {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    width: 470px;
+    height: auto;
+    color: #828282;
+  }
+  .todaystaskwrapper {
+    margin: 50px auto;
+    padding: 0px 180px 0px 180px;
+  }
+  .tasknametitle{
+    color: black;
+}
+.btn{
+    margin-left: 250px;
+}
+::ng-deep .mat-checkbox-frame {
+    border-color: red;
+  }
+  .mat-divider {
+    border-top-color: grey;
+}
