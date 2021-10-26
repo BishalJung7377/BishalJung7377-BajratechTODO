@@ -1,0 +1,25 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  width: 30%;
+  height: 10%;
+  color: #828282;
+}
+.wrapper {
+  margin: 50px auto;
+  padding: 0px 180px 0px 180px;
+}
+img {
+  height: 100%;
+}
+.cardimg{
+    padding: 10px;
+}
+.title{
+    color: black;
+ 
+}
+.subtitle{
+    color: grey;
+}

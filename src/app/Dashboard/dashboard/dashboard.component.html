@@ -1,0 +1,33 @@
+<section d-flex justify-content-end>
+  <!-- Navbar section  -->
+  <app-navbar></app-navbar>
+
+  <!-- Date Section  -->
+  <div class="midsection">
+    <div class="datesection d-flex justify-content-start">
+      <h1>
+        {{ date }}
+        <br />
+        <h2 class="subtitle">
+          You have to keep up the pace to accomplish your task in time
+          <mat-icon>alarm</mat-icon>
+        </h2>
+      </h1>
+    </div>
+    <div class="buttonsection d-flex justify-content-end">
+      <button class="addtask" mat-flat-button color="accent"   (click)="openModal()">
+        Create New Task
+      </button>
+    </div>
+  </div>
+
+  <!-- Overview section  -->
+
+  <app-overview></app-overview>
+
+  <!-- Todays Task List  -->
+  <app-todaytasklist></app-todaytasklist>
+  <!-- List Name  -->
+
+  <app-listname></app-listname>
+</section>

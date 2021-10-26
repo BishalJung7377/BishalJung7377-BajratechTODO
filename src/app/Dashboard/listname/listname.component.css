@@ -1,0 +1,70 @@
+
+.wrapper{
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  color: #828282;
+  width:40%;
+  height: auto;
+  margin: 20px 0px 0px 700px;
+}
+.list {
+  margin-top: 8px;
+  padding-left: 30px;
+  padding-right: 10px;
+  width: 100%;
+
+}
+.title{
+  margin: -233px 0px 0px 700px;
+}
+.buttonsection{
+  margin: -30px 0px 0px 1300px;
+  
+}
+::ng-deep .my-class .modal-dialog { 
+  border-radius: 20px !important;
+  width: 35%;
+}
+.btn-outline-dark {
+  background-color: #800000;
+  color: #fff;
+  padding: 15px 5px;
+  margin: 20px auto;
+  width: 25%;
+  border: none;
+  margin-left: 360px;
+}
+.outlinebtn{
+
+  background-color: #800000;
+  color: #fff;
+  padding: 15px 5px;
+  margin: 20px auto;
+  width: 25%;
+  border: none;
+  margin-left: 240px;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: red;
+  color: red;
+}
+.subtitle{
+  color: black;
+}
+.chkbx{
+  margin: 5px 1px 1px 1px;
+}
+.listtask{
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  padding:10px;
+}
+
+.listcontainer{
+  display:grid;
+  grid-template-columns:4fr 3fr 2fr;
+}
+
