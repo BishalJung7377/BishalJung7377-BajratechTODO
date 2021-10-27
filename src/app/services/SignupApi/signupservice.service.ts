@@ -15,9 +15,7 @@ userData:any
 
 
   userSignUp(data: any) {
-    // return this.http.post<any>(`${environment.baseUrl}/signup`, data)
-    return this.http.post<any>(`https://6153eda62473940017efaae5.mockapi.io/api/todo/signup`, data)
-
+    return this.http.post<any>(`${environment.baseUrl}/signup`, data)
       .pipe(map((res: any) => {
         return res;
       }))

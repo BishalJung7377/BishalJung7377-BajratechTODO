@@ -9,7 +9,8 @@ import { SignupUserData } from 'src/app/signup/SignUpUserData';
 @Component({
   selector: 'app-signuppassword',
   templateUrl: './signuppassword.component.html',
-  styleUrls: ['./signuppassword.component.css']
+  styleUrls: ['../signuppassword/Scss/signuppassword.component.scss']
+  // styleUrls: ['./signuppassword.component.css']
 })
 export class SignuppasswordComponent implements OnInit {
   title = "TODO APP";

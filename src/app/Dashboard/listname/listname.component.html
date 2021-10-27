@@ -1,4 +1,49 @@
-<h1 class="title">List Task</h1>
+<div class="todaystaskwrapper">
+  <div class="title-head">
+    <h1 class="title">List</h1>
+    <div class="buttonsection d-flex">
+      <button class="btn btn-primary-outline" (click)="openModal()"  >
+        Create New List
+      </button>
+    </div>
+  </div>
+
+  <div class="row d-flex flex-row justify-content-between flex-wrap">
+    <div
+      class="titlecard p-4 d-flex justify-content-start flex-row overview-card"
+    >
+      <div class="tasks">
+        <div class="container" *ngFor= "let item of listData">
+          <div class=" d-flex flex-row justify-content-between" >
+              <h3 class="subtitle" >{{item.ListName}}<span class="count m-3 rounded-circle" > {{listCounter}}</span> </h3>
+              <span>
+                  <mat-icon (click)="collapse= !collapse" style="cursor: pointer;">
+                      {{collapse ? "expand_more" : "expand_less" }}
+                  </mat-icon>
+              </span>
+          </div>
+        
+        <div class="listtask" *ngIf="!collapse" >
+        <div class="content" *ngFor= "let item of listData"  >
+          <div class=" listcontainer">
+              <h3 class="chkbox"  > 
+                <mat-checkbox ></mat-checkbox> {{item.id}}</h3>
+              <h3 class="subtitle">{{item.taskname}}</h3>
+              <h3 class="subtitle" >223</h3>
+          </div>
+          <mat-divider></mat-divider>
+        </div>
+        </div>
+        <mat-divider class= list>  </mat-divider>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <h1 class="title">List Task</h1>
 <div class="buttonsection d-flex">
   <button class="btn btn-primary-outline" (click)="openModal()"  >
     Create New List
@@ -28,4 +73,4 @@
 </div>
 <mat-divider class= list>  </mat-divider>
 </div>
-</div>
+</div> -->

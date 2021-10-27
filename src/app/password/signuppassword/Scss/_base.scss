@@ -1,0 +1,58 @@
+@import "./variables";
+
+
+.login-container {
+    margin-top: $login-contmargin;
+    font-family: $font-family;
+    padding: $emPadding;
+  }
+  .login-container .image-holder {
+    display: table-cell;
+    width: auto;
+    background: $backgroundImg;
+    position:$signup-pos;
+    background-repeat: $repeat-x;
+  }
+  .title {
+    text-align: $leftTextalign;
+    font-weight: $signup-fontweight;
+    margin: auto;
+    color: $background-color;
+    font-weight: $bolder-fontweight;
+  }
+  .subtitle {
+    text-align: $leftTextalign;
+    font-weight: $texPixel-margin;
+  }
+  
+  .login-container .form-container {
+    display: $tabledisplay;
+    max-width: 900px;
+    width: $signup-width;
+    margin: 0 auto;
+    border-radius: $twentyPixx;
+    padding: $emPadding;
+    box-shadow: $box-shadowss;
+    background-color: $color;
+  }
+  .cta-btn {
+    background-color:$background-color;
+    color:$color;
+    padding: $EIGHTEN-px $twentyPixx;
+    margin-top: $tenPx;
+    margin-bottom: $twentyPixx;
+    width: $signup-width;
+    border-radius: $tenPx;
+    border: none;
+  }
+  
+  .icon {
+    margin-top: $tenPx;
+  }
+  .login-container form {
+    display: $display-cell;
+    width: $width400px;
+    background-color: $color;
+    padding: $fortyPixx $Sixty-pixel;
+  }
+  

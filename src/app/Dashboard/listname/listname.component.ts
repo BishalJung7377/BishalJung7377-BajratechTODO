@@ -10,6 +10,8 @@ import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
   selector: 'app-listname',
   templateUrl: './listname.component.html',
   styleUrls: ['./listname.component.css']
+  // styleUrls: ['../listname/Scss/listname.component.scss']
+
 })
 export class ListnameComponent implements OnInit {
   panelOpenState = false;

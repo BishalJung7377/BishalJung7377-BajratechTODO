@@ -13,13 +13,49 @@
 img {
   height: 100%;
 }
-.cardimg{
-    padding: 10px;
+.cardimg {
+  padding: 10px;
 }
-.title{
-    color: black;
- 
+.title {
+  color: black;
 }
-.subtitle{
-    color: grey;
+.subtitle {
+  color: grey;
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    margin-left: -100px;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    width: 30%;
+    height: 10%;
+    color: #828282;
+    flex-direction: column;
+
+  }
+
+  .wrapper {
+    margin: 5px auto;
+    padding: 0px 10px 0px 18px;
+    display: block;
+    position: relative;
+  }
+  img {
+    height: 40%;
+  }
+  .content {
+    margin-left: -70px;
+    margin-top: 80px;
+  }
+  .content h1{
+    font-size: 20px;
+  }
+  .content h2{
+    font-size: 15px;
+    margin-left: -20px;
+  }
 }

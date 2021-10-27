@@ -5,15 +5,15 @@
   </div>
     <div class="header-right d-flex justify-content-end ">
       <div class="example-button-container d-flex justify-content-end">
-        <button mat-mini-fab disabled>
+        <button class="arb" mat-mini-fab disabled>
           <a style="color: #800000">BT</a>
         </button>
         <button type="button" mat-flat-button class="btn btn-light d-flex justify-content-end">
-          <mat-icon matPrefix>logout</mat-icon> Logout
+          <mat-icon matPrefix (click)="logout()">logout</mat-icon> Logout
         </button>
       </div>
     </div>
-  </nav>
+  </nav>   
   <!-- Date Section  -->
 
   <!-- <div class="midsection ">

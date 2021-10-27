@@ -1,0 +1,16 @@
+@import "./variables";
+
+
+.btn-primary{
+    background-color: $background-color;
+    color: $color;
+    width: $width;
+    border: $border;
+    height: $height;
+}
+.btn-secondary-outline{
+    background-color: $transparent-color;
+    border-color: $redColor;
+    color: $redColor;
+    width: $width;
+}

@@ -1,0 +1,29 @@
+@import "./variable";
+
+
+
+
+.card {
+    background: $WhiteBackground;
+    border: $border;
+    border-radius:$tenPix;
+    width: $thirtyPercent;
+    height: $tenPercent;
+    color: $Color-grey;
+  }
+  .wrapper {
+    margin: $fiftyPixel auto;
+    padding: $zeroPx $oneEighty $zeroPx $oneEighty;
+  }
+  img {
+    height: $hundredPercent;
+  }
+  .cardimg {
+    padding: $tenPix;
+  }
+  .title {
+    color: $black;
+  }
+  .subtitle {
+    color: $grey;
+  }

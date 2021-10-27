@@ -25,4 +25,11 @@ export class APIServiceService {
     })
   
   }
+
+
+
+  // For auth gaurd 
+  loggedIn(){
+    return !!localStorage.getItem('token')
+   }
 }

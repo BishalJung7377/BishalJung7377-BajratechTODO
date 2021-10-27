@@ -34,3 +34,31 @@
     color: red;
    
   }
+
+  @media screen and(max-width:700px) {
+    .mateye {
+      position: absolute;
+      left: 0;
+      transition: 0.3s;
+      color: #aaa;
+      margin-top: -53px;
+      margin-left: 160px;
+    }
+    .tick {
+      position: absolute;
+      left: 0;
+      transition: 0.3s;
+      margin-left: 160px;
+      margin-top: -75px;
+      color: green;
+    }
+    .tickclose{
+      position: absolute;
+      left: 0;
+      margin-left: 150px;
+      transition: 0.3s;
+      margin-top: -75px;
+      color: red;
+     
+    }
+  }

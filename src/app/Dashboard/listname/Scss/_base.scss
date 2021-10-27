@@ -1,0 +1,103 @@
+@import "./variables";
+
+
+
+
+.btn-primary-outline {
+    background-color: $transparent;
+    border-color: $red;
+    color: $red;
+    
+  }
+  .subtitle {
+    color: $black;
+  }
+  .chkbx {
+    margin: $fivce5Px $one1px $one1px $one1px;
+  }
+  .listtask {
+    border: $border-here;
+    border-radius: $Ten10Px;
+    padding: $Ten10Px;
+  }
+  
+  .listcontainer {
+    display: grid;
+    grid-template-columns:$grid-temp;
+  }
+  
+  .titlecard {
+    background: $WhiteColor;
+    border: $border-here;
+    border-radius: $Ten10Px;
+    width: $eightyPercent;
+    height: $Auto;
+    color: #828282;
+  }
+  .tasks {
+    width: $hundredPercentagge;
+  }
+  .todaystaskwrapper {
+    position: $inherit_pos;
+  }
+  .tasknametitle {
+    color: $black;
+  }
+  .btn {
+    margin-right: $twoHundredPX;
+  }
+  ::ng-deep .mat-checkbox-frame {
+    border-color: $red;
+  }
+  .mat-divider {
+    border-top-color: $grey;
+  }
+  
+  
+  
+  @media screen and (max-width: 700px) {
+    .titlecard {
+      background: #ccc;
+      border: $border-here;
+      border-radius: $Ten10Px;
+      width: $Auto;
+      color: #828282;
+      margin-left: -480px;
+      padding: 0px 0;
+    }
+    .title{
+      margin: 40em 0em 0em -20em ;
+  
+    }
+   .title-head{
+    margin: 40em 0em 0em -25em ;
+  
+   }
+    .row {
+      border-radius: 10px;
+      width: 80%;
+      height: auto;
+    }
+  
+  .todaystaskwrapper h1{
+    font-size: 20px;
+    margin-left: -100px;
+    padding: 0px;
+  }
+    .buttonsection{
+      margin-left: 10px;
+  
+    }
+   
+   .btn {
+      margin-left: 10px;
+      width: 20%;
+    }
+    .tasknametitle {
+      color: black;
+      text-align: center;
+    }
+    .btn p {
+      font-size: 12px;
+    }
+  }

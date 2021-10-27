@@ -9,7 +9,7 @@ import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['SCSS/dashboardcomp.scss']
 })
 export class DashboardComponent implements OnInit {
   date =new Date().toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'})

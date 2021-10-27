@@ -1,18 +1,16 @@
 @import "./variables";
 
-
-$displa:table-cell;
-$contWeidth:auto;
+$displa: table-cell;
+$contWeidth: auto;
 $tabledisplay: table;
-$maxwidth:900px;
-$percWidth:100%;
-$mediaMaxweidth:991px;
+$maxwidth: 900px;
+$percWidth: 100%;
+$mediaMaxweidth: 991px;
 
 .login-container {
   margin-top: $tenEm;
   font-family: $font-family;
   padding: 1.8rem;
-
 }
 .login-container .image-holder {
   display: $displa;
@@ -22,7 +20,7 @@ $mediaMaxweidth:991px;
   background-repeat: repeat-y;
 }
 .login-container .form-container {
-  display: $tabledisplay;;
+  display: $tabledisplay;
   max-width: $maxwidth;
   width: $percWidth;
   margin: 0 $contWeidth;
@@ -30,14 +28,8 @@ $mediaMaxweidth:991px;
   padding: 1.8rem;
   box-shadow: 2px 5px $twentPX rgba(0, 0, 0, 0.1);
   background: #fff;
-
 }
 
-@media (max-width: 900px) {
-  .login-container form {
-    padding: 40px;
-  }
-}
 .icon {
   margin-top: $tenPx;
 }
@@ -46,4 +38,22 @@ $mediaMaxweidth:991px;
   width: 400px;
   background-color: $f6color;
   padding: $fortyPx 60px;
+}
+
+@media (max-width:700px){
+
+  .login-container{
+    
+    width: 10%;
+
+  }
+  .form-container{
+    max-width: 50%;
+  }
+  .login-container form {
+   
+    width: 50%;
+
+  }
+
 }

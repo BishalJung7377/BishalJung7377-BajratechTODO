@@ -1,0 +1,28 @@
+
+
+@import "./base";
+@import "./variables";
+
+
+@mixin modalMixin {
+    position: $Absoluteposition;
+    left: $texPixel;
+    top: $top;
+    transition:$transition;
+    margin-top: $margin-top;
+}
+
+@mixin  inputMixin {
+    padding-left: $padding-left;
+    border-radius: $border-radius;
+}
+.col i {
+    @include modalMixin;
+    margin-left: 20px;
+    
+  }
+
+  input[type="text"] {
+   
+    @include inputMixin;
+  }

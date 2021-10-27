@@ -1,0 +1,121 @@
+@import "./variables";
+
+
+$colour:#fff;
+$table-cell: table-cell;
+$rem:1.8rem;
+$flex:flex;
+
+
+.login-container {
+    margin-top: $signupmargintop;
+    font-family:$signupFont-family;
+    padding:$rem;
+  }
+  .login-container .image-holder {
+    display: $table-cell;
+    width: $signupautofield;
+    background: $backimg;
+    position:$signupRelposition;
+    background-repeat: repeat-x;
+  }
+  .title {
+    text-align: $signuptext-align;
+    font-weight: bold;
+    margin: $signupautofield;
+    color: $signupcolor;
+    font-weight: bolder;
+  }
+  .subtitle {
+    text-align: $signuptext-align;
+    font: weight $texpix;
+  }
+  
+  .login-container .form-container {
+    display: table;
+    max-width: 900px;
+    width: $hundredwidth;
+    margin: 0 auto;
+    border-radius: $twentypix;
+    padding: $rem;
+    box-shadow: 2px 5px $twentypix rgba(0, 0, 0, 0.1);
+    background: $colour;
+  }
+  .next-btn {
+    background-color: $signupcolor;
+    color: $colour;
+    padding: 18px $twentypix;
+    margin-top: $texpix;
+    margin-bottom: $twentypix;
+    width: $hundredwidth;
+    border-radius: $texpix;
+    border: none;
+  }
+  
+  .icon {
+    margin-top: $texpix;
+  }
+  .login-container form {
+    display:$table-cell;
+    width: $signupwidth;
+    background-color: $signupbackgroundcolor;
+    padding: $signuppadding 60px;
+  }
+  
+
+  @media screen and (max-width:700px) {
+    .login-container {
+        margin-top: 10px;
+        padding:10px;
+      }
+      .login-container form {
+        display:$table-cell;
+        width:100px;
+        background-color: $signupbackgroundcolor;
+        padding: $signuppadding 60px;
+      }
+      .login-container .form-container {
+        display: table;
+        max-width: 100px;
+        width: 100px;
+        margin: 0 auto;
+        border-radius: $twentypix;
+        padding: $rem;
+        box-shadow: 2px 5px $twentypix rgba(0, 0, 0, 0.1);
+        background:$colour;
+      }
+
+      .next-btn {
+        background-color: $signupcolor;
+        color: $colour;
+        padding: 18px $twentypix;
+        margin-top: $texpix;
+        margin-bottom: $twentypix;
+        width: 50%;
+        border-radius: $texpix;
+        border: none;
+      }
+      .title {
+        text-align: $signuptext-align;
+        font-weight: small;
+        margin: $signupautofield;
+        color: $signupcolor;
+      }
+      .subtitle {
+        text-align: $signuptext-align;
+        font: weight 5px;
+      }
+  }
+@media (max-width: 991px) {
+    .login-container form {
+      padding: $signuppadding;
+    }
+  }
+  .email-login {
+    display: $flex;
+    flex-direction: column;
+    width: $signupwidth;
+  }
+  .email-login label {
+    color: rgb(170 166 166);
+  }

@@ -1,0 +1,20 @@
+@import "./variables";
+
+
+section {
+    background: $back-Color;
+    width: $hundredPercent;
+    height: $hundredPercent;
+  }
+  .navbar-light {
+    width: $eighty_percent;
+    height:$seventyPx;
+    margin: $tenPx $auto;
+    box-shadow: $box-shadow;
+  }
+  .todo {
+    font-weight: $bold;
+    font-size: 24px;
+    color: $MaroonColor;
+    letter-spacing: $tenPx;
+  }

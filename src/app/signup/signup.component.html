@@ -22,7 +22,7 @@
             size="40"
             placeholder="Enter name here"
             name="name"
-           
+            class="signupname"
             required
           />
           <i class="fas fa-user" aria-hidden="true"></i>
@@ -35,20 +35,27 @@
             </div>
           </ng-template>
         </div>
-        <span class="emailerror" 
-        *ngIf="signupValidData.name.invalid && signupValidData.name.touched"> 
-        Name is required</span>
+        <span
+          class="emailerror"
+          *ngIf="signupValidData.name.invalid && signupValidData.name.touched"
+        >
+          Name is required</span
+        >
 
         <!-- Gender Radio button  -->
 
-        <div class="iconsinput">
+        <div class="iconsinputs">
           <p for="radiobtns">
             <a>Gender</a>
           </p>
-          <mat-radio-group formControlName="gender" aria-label="Select an option">
-            <mat-radio-button value="Male">Male</mat-radio-button>
-            <mat-radio-button value="Female">Female</mat-radio-button>
-            <mat-radio-button value="Other">Other</mat-radio-button>
+          <mat-radio-group
+            formControlName="gender"
+            aria-label="Select an option"
+            name="radio"
+          >
+            <mat-radio-button name="radio1" value="Male">Male</mat-radio-button>
+            <mat-radio-button name="radio2" value="Female">Female</mat-radio-button>
+            <mat-radio-button name="radio3" value="Other">Other</mat-radio-button>
           </mat-radio-group>
         </div>
         <br />
@@ -60,15 +67,18 @@
           <div class="input-group">
             <input
               type="text"
+              class="datesignup"
               ngModel
               formControlName="date"
               placeholder="Select your date of birth"
-              ngbDatepicker
+            name="date"
+            ngbDatepicker
               #d="ngbDatepicker"
             />
             <i
               class="fas fa-calendar-alt"
               aria-hidden="true"
+              id="dattgl"
               (click)="d.toggle()"
             ></i>
           </div>
@@ -83,8 +93,9 @@
             <input
               type="text"
               ngModel
+              name="countryname"
               formControlName="country"
-              style="width: 100px;"
+              style="width: 100px"
               size="4"
               placeholder="Country"
             />
@@ -93,8 +104,9 @@
               <input
                 type="text"
                 ngModel
+                name="phnumber"
                 formControlName="phonenumber"
-                style="width: 274px;"
+                style="width: 274px"
                 placeholder="98*******"
                 (keypress)="numericOnly($event)"
               />
@@ -114,6 +126,7 @@
             type="text"
             matInput
             ngModel
+            name="email"
             formControlName="email"
             placeholder="Enter Email here"
             name="email"
@@ -130,21 +143,27 @@
             </div>
           </ng-template>
         </div>
-        <span class="emailerror" *ngIf="signupValidData.email.invalid && signupValidData.email.touched"> Email is required</span>
+        <span
+          class="emailerror"
+          *ngIf="signupValidData.email.invalid && signupValidData.email.touched"
+        >
+          Email is required</span
+        >
       </div>
       <div class="Next-button">
-        <button class="next-btn" [disabled]= !signupForm.valid mat-raised-button color="primary" type="submit">
-         Next
+        <button
+          class="next-btn"
+          [disabled]="!signupForm.valid"
+          mat-raised-button
+          color="primary"
+          type="submit"
+        >
+          Next
         </button>
       </div>
       <p style="text-align: center">
         Already Have An
-        <a
-          style="color: #800000"
-          class="create-acc"
-          routerLink=""
-          >Account?</a
-        >
+        <a style="color: #800000" class="create-acc" routerLink="">Account?</a>
       </p>
     </form>
     <div class="image-holder"></div>

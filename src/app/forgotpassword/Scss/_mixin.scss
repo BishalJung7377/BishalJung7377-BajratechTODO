@@ -1,0 +1,30 @@
+@import "./variable";
+@import "./base";
+
+
+
+@mixin ForgotMixin {
+    padding: $fifteenPixel $twentyPixel;
+    margin-top: $eightPixel;
+    margin-bottom: $fifteenPixel;
+    border: $B-order;
+    border-radius: $eightPixel;
+    box-sizing: $box-sizing;
+    width: $three95width;
+}
+input[type="text"] {
+    @include ForgotMixin;
+  }
+
+@mixin ForgotIconInput {
+    position: $relAbsolute;
+    left: $zero;
+    top: $top;
+    transition: $transition;
+    margin-top: $twentyEight;
+    margin-left: $twentyPixel;
+}
+
+  .iconsinput i {
+    @include ForgotIconInput;
+  }

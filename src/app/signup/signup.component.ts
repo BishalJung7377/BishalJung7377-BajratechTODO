@@ -6,7 +6,7 @@ import { SignupserviceService } from '../services/SignupApi/signupservice.servic
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['SCSS/signup.component.scss']
 })
 export class SignupComponent implements OnInit {
   signupForm !: FormGroup

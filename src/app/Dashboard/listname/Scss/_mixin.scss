@@ -1,0 +1,52 @@
+@import "./base";
+@import "./variables";
+
+@mixin ListMixin {
+  margin-top: $Eight8Px;
+  padding-left: $thirty30Px;
+  padding-right: $Ten10Px;
+  width: $hundredPercentagge;
+}
+@mixin buttonecMixin {
+  margin: $negative-50Px $Ten10Px $Ten10Px $Five500px;
+}
+@mixin modal-diagMixin {
+  border-radius: $important;
+  width: 35%;
+}
+@mixin outline-dark {
+  background-color: $MaroonCOlor;
+  color: $WhiteColor;
+  padding: $fifteen15px $fivce5Px;
+  margin: $twenty20px $Auto;
+  width: $Twenty25Percent;
+  border: $none;
+  margin-left: $three360px;
+}
+@mixin outlinebtn {
+  background-color: $MaroonCOlor;
+  color: $WhiteColor;
+  padding: $fifteen15px $fivce5Px;
+  margin: $twenty20px $Auto;
+  width: $Twenty25Percent;
+  border: $none;
+  margin-left: $two240px;
+}
+
+.list {
+  @include ListMixin;
+}
+.title {
+}
+.buttonsection {
+  @include buttonecMixin;
+}
+::ng-deep .my-class .modal-dialog {
+  @include modal-diagMixin;
+}
+.btn-outline-dark {
+  @include outline-dark;
+}
+.outlinebtn {
+  @include outlinebtn;
+}

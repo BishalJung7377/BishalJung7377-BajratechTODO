@@ -1,0 +1,16 @@
+@import "./base";
+@import "./variables";
+
+@mixin CardMixnin {
+    background: $background;
+    border:$border;
+    border-radius: $border-radius;
+    width: $width;
+    height: $height;
+    color: $color;
+}
+
+.titlecards {
+   @include CardMixnin;
+  }
+

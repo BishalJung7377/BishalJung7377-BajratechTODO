@@ -1,28 +1,15 @@
-
-.wrapper{
-  background: #ffffff;
-  border: 1px solid #e3e3e3;
-  border-radius: 10px;
-  color: #828282;
-  width:40%;
-  height: auto;
-  margin: 20px 0px 0px 700px;
-}
 .list {
   margin-top: 8px;
   padding-left: 30px;
   padding-right: 10px;
   width: 100%;
-
 }
-.title{
-  margin: -233px 0px 0px 700px;
+.title {
 }
-.buttonsection{
-  margin: -30px 0px 0px 1300px;
-  
+.buttonsection {
+  margin: -50px 10px 10px 500px;
 }
-::ng-deep .my-class .modal-dialog { 
+::ng-deep .my-class .modal-dialog {
   border-radius: 20px !important;
   width: 35%;
 }
@@ -35,8 +22,7 @@
   border: none;
   margin-left: 360px;
 }
-.outlinebtn{
-
+.outlinebtn {
   background-color: #800000;
   color: #fff;
   padding: 15px 5px;
@@ -46,25 +32,103 @@
   margin-left: 240px;
 }
 
+
+
 .btn-primary-outline {
   background-color: transparent;
   border-color: red;
   color: red;
+  
 }
-.subtitle{
+.subtitle {
   color: black;
 }
-.chkbx{
+.chkbx {
   margin: 5px 1px 1px 1px;
 }
-.listtask{
-  border: 1px solid #E3E3E3;
+.listtask {
+  border: 1px solid #e3e3e3;
   border-radius: 10px;
-  padding:10px;
+  padding: 10px;
 }
 
-.listcontainer{
-  display:grid;
-  grid-template-columns:4fr 3fr 2fr;
+.listcontainer {
+  display: grid;
+  grid-template-columns: 4fr 3fr 2fr;
 }
 
+.titlecard {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  width: 80%;
+  height: auto;
+  color: #828282;
+}
+.tasks {
+  width: 100%;
+}
+.todaystaskwrapper {
+  position: inherit;
+}
+.tasknametitle {
+  color: black;
+}
+.btn {
+  margin-right: 200px;
+}
+::ng-deep .mat-checkbox-frame {
+  border-color: red;
+}
+.mat-divider {
+  border-top-color: grey;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .titlecard {
+    background: #ccc;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    width: auto;
+    color: #828282;
+    margin-left: -480px;
+    padding: 0px 0;
+  }
+  .title{
+    margin: 40em 0em 0em -20em ;
+
+  }
+ .title-head{
+  margin: 40em 0em 0em -25em ;
+
+ }
+  .row {
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+  }
+
+.todaystaskwrapper h1{
+  font-size: 20px;
+  margin-left: -100px;
+  padding: 0px;
+}
+  .buttonsection{
+    margin-left: 10px;
+
+  }
+ 
+ .btn {
+    margin-left: 10px;
+    width: 20%;
+  }
+  .tasknametitle {
+    color: black;
+    text-align: center;
+  }
+  .btn p {
+    font-size: 12px;
+  }
+}

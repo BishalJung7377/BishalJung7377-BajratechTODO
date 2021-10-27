@@ -1,8 +1,8 @@
 
 section{
     background:#FBFCFD;
-    width: 100%;
-    height: auto;
+    max-width: 99%;
+    height: 100%;
 }
 .midsection{
     margin-top: 50px;
@@ -47,4 +47,40 @@ section{
         margin-right: 180px;
         width: auto;
     }
+}
+
+@media (max-width: 700px) {
+
+    section{
+        background:#FBFCFD;
+        max-height: 100%;
+        max-width: 100%;
+    
+    }
+    .subtitle{
+        font-size: small;
+        color: grey;
+        font-weight: 100;
+        margin: 0px 0px 100px 0px;
+    }
+.midsection{
+    margin-top: 50px;
+    margin-right: 100px;
+}
+.datesection{
+   margin-left: 40px;
+   text-align: justify;
+   font-size: 10px;
+}
+
+.buttonsection{
+    margin-left: 10px;
+    margin-bottom: 20px;
+ 
+}
+.addtask{
+    width: 100%;
+    margin-right: -250px;
+    margin-top: -50px;
+}
 }

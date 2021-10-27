@@ -1,4 +1,3 @@
-import { MatDatepicker } from '@angular/material/datepicker';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -38,7 +37,23 @@ import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import { ModalComponent } from './Modal/modal/modal.component';
 import { MmodalAddnewTaskComponent } from './Modal/mmodal-addnew-task/mmodal-addnew-task.component';
 import {MatSelectModule} from '@angular/material/select';
+import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
+import { AuthGuard } from './AuthGaurd/auth.guard';
 
+
+
+
+
+
+
+
+
+
+import {
+  NgxMatDatetimePickerModule, 
+  NgxMatNativeDateModule, 
+  NgxMatTimepickerModule 
+} from '@angular-material-components/datetime-picker';
 
 @NgModule({
   declarations: [
@@ -82,9 +97,14 @@ import {MatSelectModule} from '@angular/material/select';
     MatExpansionModule,
     MdbModalModule,
     MatSelectModule,
+    NgxMatDatetimePickerModule, 
+    NgxMatNativeDateModule, 
+    NgxMatTimepickerModule,
+    DlDateTimeDateModule, 
+    DlDateTimePickerModule 
 
   ],
-  providers: [{
+  providers: [AuthGuard, {
     provide:HTTP_INTERCEPTORS, useClass: InterceptorServiceService, multi: true
   },
   MatDatepickerModule,

@@ -52,9 +52,27 @@
   padding: 40px 60px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 700px) {
   .login-container form {
-    padding: 40px;
+    width: 100%;
+  }
+  .login-container .form-container {
+width: 100%;
+  }
+  .cta-btn {
+   
+    width: 50%;
+  }
+  .icon{
+    margin: 1em auto;
+  }
+  .mateye {
+  margin-left: -100px;
+  }
+  .tick {
+
+    margin-top: -75px;
+    margin-left: 350px;
   }
 }
 .email-login {

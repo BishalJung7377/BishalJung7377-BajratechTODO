@@ -1,0 +1,50 @@
+@import "./variables";
+
+
+
+.todaystaskwrapper {
+    padding: $zeroPx $oneEighty $zeroPx $oneEighty;
+  }
+  .tasknametitle {
+    color: $black;
+  }
+  .btn {
+    margin-left: $two50PX;
+    height: $fortyPx;
+  }
+  ::ng-deep .mat-checkbox-frame {
+    border-color: $red;
+  }
+  .mat-divider {
+    border-top-color: $grey;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .tasknametitle {
+      color: $black;
+      text-align: $align_center;
+    }
+    .titlecards {
+      background: $WCCC;
+      border: $border;
+      border-radius: $border-radius;
+      color: #828282;
+      padding: $zeroPx $zer0;
+      width: $height;
+      margin-left: $negative130px;
+
+    }
+    .mat-divider {
+      border-top-color: $grey;
+      width: $width;
+    }
+    .btn {
+      margin-left: $border-radius;
+      width: $hundredPx;
+      height: $thirtyPx;
+    }
+    .btn p {
+      font-size: $twelvePx;
+    }
+  }
+  

@@ -1,0 +1,63 @@
+@import "./variable";
+@import "./mixin";
+@import "./base";
+
+.iconsinput input[type="text"] {
+    padding-left: $fourtyPixel;
+  }
+  .iconsinput {
+    position: $relPosRelative;
+  }
+  .iconsinput input[type="text"]:focus + i {
+    color: $Redcolor;
+  }
+  
+  .tick {
+    position: $relAbsolute;
+    left: $zero;
+    color: $green;
+    transition: $transition;
+    margin-top: $negative75;
+    margin-left:$three50Px;
+  }
+  .tickclose {
+    position: $relAbsolute;
+    left: $zero;
+    color: $red;
+    transition: $transition;
+    margin-top: $negative75;
+    margin-left: $three50Px;
+  }
+  input:invalid {
+    background-color: #ffdddd;
+  }
+  
+  input:valid {
+    background-color:$white-color;
+  }
+  input:required {
+    border-color: $Redcolor;
+    border-width: 1px;
+  }
+  
+  input:required:invalid {
+    border-color: #c00000;
+  }
+  ng-invalid:not(input) {
+    border:$onepxBorder $red;
+  }
+  ng-valid:not(form) {
+    border: $onepxBorder  $green;
+  }
+  
+  .emailerror {
+    color: $red;
+  }
+  
+  .logintxt {
+    text-align: $textCenter;
+  }
+  .login {
+    text-align:$textCenter;
+    color: $Redcolor;
+  }

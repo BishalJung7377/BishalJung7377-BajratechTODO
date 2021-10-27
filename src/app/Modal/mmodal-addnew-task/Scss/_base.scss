@@ -1,0 +1,13 @@
+@import "./variables";
+
+.modal-header {
+  border-bottom: $border;
+}
+
+.modal-footer {
+  border-top: $border;
+}
+::ng-deep .modal-dialog-centered {
+  max-width: $width;
+  width: $width;
+}

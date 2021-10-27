@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-overview',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.css']
+  // styleUrls: ['../overview/Scss/overview.component.scss']
+
 })
 export class OverviewComponent implements OnInit {
 

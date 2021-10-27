@@ -6,7 +6,8 @@ import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  // styleUrls: ['./modal.component.css']
+  styleUrls: ['../modal/Scss/modal.component.scss']
 })
 export class ModalComponent implements OnInit {
   NewListTask!: FormGroup

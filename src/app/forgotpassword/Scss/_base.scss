@@ -1,0 +1,84 @@
+@import "./variable";
+
+
+
+$cVolor:#800000;
+.app-container {
+    margin-top: $emten;
+    font-family: $font-family;
+    padding: $emPadding1;
+  }
+  
+  .app-container .forgotimage {
+    display: $table-cell;
+    width: $auto;
+    background: $back-img;
+    position: $relPosRelative;
+    background-repeat: repeat-x;
+  }
+  .title {
+    text-align: $textalign;
+    font-weight: $bold;
+    margin: $auto;
+    color: $Redcolor;
+    font-weight: $bolder;
+  }
+  
+  .subtitle {
+    text-align: $textalign;
+    font: weight 10px;
+  }
+  .modal-body {
+    text-align: $textCenter;
+  }
+  
+  .app-modal-window .modal-dialog {
+    width: $fivehundredpx;
+  }
+  
+  .app-container .appform-container {
+    display: $table;
+    max-width: $max-wdth;
+    width: $hundred-percent;
+    margin: $zero $auto;
+    border-radius: $twentyPixel;
+    padding: $emPadding1;
+    background: $white-color;
+    box-shadow: $box-shadow;
+  
+  }
+  
+  .sendbutton {
+    background-color: $cVolor;
+    color: $white-color;
+    padding: $eighteenPixel $twentyPixel;
+    margin-top: $texPixel;
+    margin-bottom: $twentyPixel;
+    width: $hundred-percent;
+    border-radius: $texPixel;
+    border: $none;
+  }
+  .btn-outline-dark {
+    background-color: $Redcolor;
+    color: $white-color;
+    padding: $texPixel 5px;
+    margin: $twentyPixel $auto;
+    width: $twenty-percent;
+    border: $none;
+  }
+  
+  ::ng-deep .my-class .modal-dialog { 
+    border-radius: $borderRadius;
+    width: $twenty-fice;
+  }
+  
+  
+  .icon {
+    margin-top: $texPixel;
+  }
+  .app-container form {
+    display: $table-cell;
+    width: $fourhundred;
+    background-color: $white-color;
+    padding: $fourtyPixel $sixtyPixel;
+  }

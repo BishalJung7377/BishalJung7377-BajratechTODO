@@ -1,23 +1,43 @@
-
-section{
-    background:#FBFCFD;
-    width: 100%;
-    height: 100%;
+section {
+  background: #fbfcfd;
+  width: 100%;
+  height: 100%;
 }
-.navbar-light{
-width: 80%;
-height: 70px;
-margin: 10px auto  ;
-box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+.navbar-light {
+  width: 80%;
+  height: 70px;
+  margin: 10px auto;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
 }
-.todo{
+.todo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #800000;
+  letter-spacing: 10px;
+}
+@media  screen and (max-width: 700px) {
+  .todo {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 14px;
     color: #800000;
-    letter-spacing: 10px; 
+    letter-spacing: 10px;
+    margin-top: 10px;
+  }
+  button {
+    position: relative;
+    margin-left: 10px;
+    padding: 0px;
+    margin-top: -30px;
+  }
+  .arb {
+    position: relative;
+    margin-left: 180px;
+    padding: 0px;
+    margin-top: -30px;
+  }
 }
 @media only screen and (max-width: 600px) {
-.title{
+  .title {
     font-size: 10px;
-}
+  }
 }

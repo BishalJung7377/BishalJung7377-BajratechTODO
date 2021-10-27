@@ -18,6 +18,13 @@ $flexdisp: flex;
   margin-bottom: 30px;
   color: $bajracolor;
 }
+.creataccc{
+  text-align: center;
+}
+.create-acc{
+  text-align: center; 
+  color: #800000 
+}
 .subtitle {
   text-align: $leftTextalign;
   font: weight $tenPx;
@@ -32,7 +39,10 @@ $flexdisp: flex;
   border-radius:  $tenPx;
   border: $bordernon;
 }
-
+.forget-pass{
+  text-align: right; 
+  color: #800000;
+}
 .email-login {
   display: $flexdisp;
   flex-direction: column;
@@ -43,4 +53,23 @@ $flexdisp: flex;
 }
 :host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
   stroke: white;
+}
+@media (max-width:700px){
+  .cta-btn {
+ 
+    width: 50%;
+
+  }
+
+  .forget-pass{
+    text-align: center; 
+    color: #800000;
+  }
+  .creataccc{
+    text-align: left;
+  }
+  .create-acc{
+    text-align: left; 
+    color: #800000 
+  }
 }

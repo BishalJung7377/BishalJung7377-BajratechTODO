@@ -6,7 +6,8 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-forgotpassword',
   templateUrl: './forgotpassword.component.html',
-  styleUrls: ['./forgotpassword.component.css'],
+  // styleUrls: ['./forgotpassword.component.css'],
+  styleUrls: ['../forgotpassword/Scss/forgotpassword.component.scss'],
   providers: [NgbModalConfig, NgbModal]
 })
 export class ForgotpasswordComponent implements OnInit {

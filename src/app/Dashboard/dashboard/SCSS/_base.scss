@@ -1,0 +1,89 @@
+
+@import "./variable";
+
+
+section{
+    background:$backgroundcolour;
+    max-width: $dashWidth;
+    height: $dashHeight;
+}
+.midsection{
+    margin-top: 50px;
+}
+
+::ng-deep .modal-dialog-centered .modal-dialog { 
+    max-width: $dashHeight;
+    width: $dashHeight;
+}
+.subtitle{
+    font-size: small;
+    color: grey;
+    font-weight: 400;
+}
+.datesection{
+    margin-left: $dashMarginR;
+}
+.buttonsection{
+    margin-top: $dashMargintop;
+    margin-right: $dashMarginR;
+}
+.addtask{
+    background-color: $dashAddtaskcolor;
+    color: $dashColor;
+    padding: 1px 2px;
+    margin-top: $dash10px;
+    margin-bottom: $dash20px;
+    height: 5%;
+    width: 15%;
+}
+@media only screen and (max-width: 600px) {
+    section{
+        background:#FBFCFD;
+        width: $dashHeight;
+        height: $dashHeight;
+    }
+    .midsection{
+        text-align: center;
+    }
+    .buttonsection{
+        margin-top: $dashMargintop;
+        margin-right: $dashMarginR;
+        width: auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    section{
+        background:#FBFCFD;
+        max-height: $dashHeight;
+        max-width: $dashHeight;
+    
+    }
+    .subtitle{
+        font-size: small;
+        color: grey;
+        font-weight: 100;
+        margin: 0px 0px $dashMargin100 0px;
+    }
+.midsection{
+    margin-top: 50px;
+    margin-right: $dashMargin100;
+}
+.datesection{
+   margin-left: 40px;
+   text-align: justify;
+   font-size: $dash10px;
+}
+
+.buttonsection{
+    margin-left: $dash10px;
+    margin-bottom: $dash20px;
+ 
+}
+.addtask{
+    width: $dashHeight;
+    margin-right: -250px;
+    margin-top: -50px;
+}
+}

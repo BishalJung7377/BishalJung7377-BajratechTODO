@@ -1,0 +1,46 @@
+@import "./variables";
+
+@mixin todoMixin {
+    font-weight: $bold;
+      font-size: $fourteenPx;
+      color: $MaroonColor;
+      letter-spacing: $tenPx;
+      margin-top: $tenPx;
+}
+
+@mixin  todoButton {
+    position: $posRelatiive;
+    margin-left:$tenPx;
+    padding: $xeroPx;
+    margin-top: $negThirty;
+}
+
+@mixin arbMixin {
+    position: $posRelatiive;
+    margin-left: $hundredEighty;
+    padding: $xeroPx;
+    margin-top: $negThirty;
+}
+
+@mixin  textTitleMixin {
+    font-size: $tenPx;
+    
+}
+
+@media  screen and (max-width: 700px) {
+    .todo {
+    @include todoMixin;
+    }
+    button {
+     @include todoMixin;
+    }
+    .arb {
+     @include arbMixin;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .title {
+     @include textTitleMixin;
+    }
+  }
+  

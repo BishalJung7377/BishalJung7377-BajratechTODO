@@ -1,0 +1,62 @@
+@import "./base";
+@import "./variable";
+
+@mixin wrapperMixin {
+  margin-left: $negativeHundred;
+}
+@mixin CardMixin {
+  background: $WhiteBackground;
+  border: $border;
+  border-radius: $tenPix;
+  width: $thirtyPercent;
+  height: $tenPercent;
+  color: $Color-grey;
+  flex-direction: $column;
+}
+
+@mixin WrapperMixin {
+  margin: $fivePix auto;
+  padding: $zeroPx $tenPix $zeroPx 18px;
+  display: $block;
+  position: $posRelative;
+}
+@mixin imgMixin {
+  height: $fourtyPercent;
+}
+
+@mixin contentmixin {
+  margin-left: $negative70Px;
+  margin-top: $eightyPx;
+}
+@mixin content-h1 {
+  font-size: $twentyPx;
+}
+@mixin content-h2 {
+  font-size: $fifteenPx;
+  margin-left: $negative20px;
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    @include wrapperMixin;
+  }
+  .card {
+    @include CardMixin;
+  }
+
+  .wrapper {
+    @include WrapperMixin;
+  }
+  img {
+    @include imgMixin;
+  }
+  .content {
+    @include contentmixin;
+  }
+  .content h1 {
+    @include content-h1;
+  }
+  .content h2 {
+    @include content-h2;
+  }
+}

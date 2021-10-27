@@ -1,0 +1,91 @@
+@import "./base";
+@import "./variables";
+@import "./mixin";
+
+
+
+$display-column:column;
+$fourHundPixel: 400px;
+$flexdispay: flex;
+
+.email-login {
+  display: $flexdispay;
+  flex-direction: $display-column;
+  width: $fourHundPixel;
+}
+.email-login label {
+  color: rgb(170 166 166);
+}
+
+.iconsinput input[type="text"],
+input[type="password"] {
+  padding-left: $fortyPixx;
+}
+.iconsinput {
+  position: $signup-pos;
+}
+.iconsinput i {
+  position: $signup-posAbs;
+  left: 0;
+  top: 9px $eightPixel;
+  transition: $transition;
+  margin-top: 28px;
+  margin-left: $twentyPx;
+}
+
+.iconsinput input[type="password"]:focus + i {
+  color: $background-color
+}
+
+.mateye {
+  position: $signup-posAbs;
+  left: 0;
+  color: #aaa;
+  transition: $transition;
+  margin-top: -53px;
+  margin-left: 360px;
+}
+
+input:valid {
+  background-color: white;
+}
+
+form:valid {
+  border: 1px solid white;
+}
+
+input:required {
+  border-color: $background-color;
+  border-width: $onePx;
+}
+
+input:required:invalid {
+  border-color: #c00000;
+}
+ng-invalid:not(input) {
+  border: $solidRed-border
+}
+ng-valid:not(form) {
+  border: $solidGreen-border;
+}
+
+.emailerror {
+  color: $errColor;
+}
+.passworderror {
+  color: $errColor;
+}
+
+@media screen and (max-width: 700px) {
+    .login-container {
+        width: 80%;
+    
+      }
+      .form-container {
+          width: 80%;
+        }
+        .form{
+          width: 80%;
+    
+        }
+}

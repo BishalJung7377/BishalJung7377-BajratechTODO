@@ -20,7 +20,7 @@
     
   }
 
-  input[type="text"] {
+  input[type="date"] {
     padding-left: 40px;
     border-radius: 6px;
   }

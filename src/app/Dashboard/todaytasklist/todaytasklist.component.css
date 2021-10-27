@@ -1,24 +1,54 @@
-.titlecard {
-    background: #ffffff;
-    border: 1px solid #e3e3e3;
-    border-radius: 10px;
-    width: 470px;
-    height: auto;
-    color: #828282;
-  }
-  .todaystaskwrapper {
-    margin: 50px auto;
-    padding: 0px 180px 0px 180px;
-  }
-  .tasknametitle{
-    color: black;
+.titlecards {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  color: #828282;
 }
-.btn{
-    margin-left: 250px;
+.todaystaskwrapper {
+  padding: 0px 180px 0px 180px;
+}
+.tasknametitle {
+  color: black;
+}
+.btn {
+  margin-left: 250px;
+  height: 40px;
 }
 ::ng-deep .mat-checkbox-frame {
-    border-color: red;
+  border-color: red;
+}
+.mat-divider {
+  border-top-color: grey;
+}
+
+@media (max-width: 700px) {
+  .tasknametitle {
+    color: black;
+    text-align: center;
+  }
+  .titlecards {
+    background: #ccc;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    color: #828282;
+    padding: 0px 0;
+    border-radius: 10px;
+    width: auto;
+    margin-left: -130px;
+    padding: 0px 0;
   }
   .mat-divider {
     border-top-color: grey;
+    width: 100%;
+  }
+  .btn {
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+  }
+  .btn p {
+    font-size: 12px;
+  }
 }

@@ -6,7 +6,7 @@
     </button>
   </div>
   <div class="modal-body">
-   <form>
+   <form [formGroup]="TaskForm" #taskform="ngForm" (onSubmit)="taskformsubmit(taskform.value)">
    <div class="form-group">
     <label for="createlIst">Create New Task</label>
     <input
@@ -15,34 +15,37 @@
       formControlName="taskName"
       name="taskName"
       size="40"
-      placeholder="Create New List Here"
+      placeholder="Task Name Here"
     />
+    <div class="tick" *ngIf="formValidation.taskName.invalid && formValidation.taskName.touched">
+      <a style="color: red"> TaskName is required </a>
+    </div>
    </div>
    <div class="row">
     <div class="col">
       <label for="formGroupExampleInput">Choose List Name</label>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" formControlName="listName">
         <option selected>Choose List Name</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="College Work">College Work</option>
       </select>
       
     </div>
     <div class="col">
       <label for="formGroupExampleInput">Choose Priority</label>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" formControlName="priority">
         <option selected>Choose Priority</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
       </select>
     </div>
     <div class="col">
       <label for="formGroupExampleInput">Choose Date and Time</label>
 
       <input
-      type="text"
+      type="date"
       class="form-control" 
       ngModel
       formControlName="date"
@@ -61,7 +64,7 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-secondary" (click)="modalRef.close('cancel click')">Cancel</button>
-    <button type="button" class="btn btn-danger" (click)="modalRef.close('Ok click')">Save</button>
+    <button type="button"  (click)="taskformsubmit(taskform.value)"class="btn btn-danger" (click)="modalRef.close('Ok click')" [disabled]="!TaskForm.valid">Save</button>
   </div>
 
   
