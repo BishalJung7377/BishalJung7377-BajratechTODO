@@ -2,10 +2,10 @@ import { SignuppasswordComponent } from './password/signuppassword/signuppasswor
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { ForgotpasswordComponent } from './forgot_password/forgotpassword.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
-import { AuthGuard } from './AuthGaurd/auth.guard';
+import { AuthGuard } from './auth_gaurd/auth.guard';
 
 const routes: Routes = [
   {

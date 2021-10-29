@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { ForgotpasswordComponent } from './forgot_password/forgotpassword.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatButtonModule} from "@angular/material/button"
 import {MatSliderModule} from "@angular/material/slider";
@@ -38,7 +38,7 @@ import { ModalComponent } from './Modal/modal/modal.component';
 import { MmodalAddnewTaskComponent } from './Modal/mmodal-addnew-task/mmodal-addnew-task.component';
 import {MatSelectModule} from '@angular/material/select';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
-import { AuthGuard } from './AuthGaurd/auth.guard';
+import { AuthGuard } from './auth_gaurd/auth.guard';
 
 
 

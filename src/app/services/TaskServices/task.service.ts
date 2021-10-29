@@ -14,7 +14,7 @@ export class TaskService {
 
   // create task 
   createTask(TaskName:string, ListName:string, Priority:string,Date:string): Observable<any>{
-  return this.http.post(`${environment.baseUrl}/NewTask`,
+  return this.http.post(`https://6153eda62473940017efaae5.mockapi.io/api/todo/NewTask`,
  {
   TaskName:TaskName,
   ListName:ListName,
@@ -24,6 +24,6 @@ export class TaskService {
 
  ///displaytask
  showTask(){
-   return this.http.get(`${environment.baseUrl}/NewTask`)
+   return this.http.get(`https://6153eda62473940017efaae5.mockapi.io/api/todo/NewTask`)
  }
 }
