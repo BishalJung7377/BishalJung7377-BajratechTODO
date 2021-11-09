@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { Users } from '../user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,9 @@ userData:any
   ) { }
 
 
-  userSignUp(data: any) {
-    return this.http.post<any>(`https://6153eda62473940017efaae5.mockapi.io/api/todo/signup`, data)
-      .pipe(map((res: any) => {
+  userSignUp(data: Users) {
+    return this.http.post<Users>(`https://6153eda62473940017efaae5.mockapi.io/api/todo/signup`, data)
+      .pipe(map((res: Users) => {
         return res;
       }))
   }
