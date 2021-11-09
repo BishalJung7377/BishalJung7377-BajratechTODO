@@ -36,13 +36,15 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router
     ) { 
-      this.loginformvalidation = this.formBuilder.group({
-        email: ["", [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-        password: ["", [Validators.required, Validators.minLength(4)]]
-      })
     }
   ngOnInit(): void {
-   
+   this.initialize()
+  }
+  initialize(): void{
+    this.loginformvalidation = this.formBuilder.group({
+      email: ["", [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+      password: ["", [Validators.required, Validators.minLength(4)]]
+    })
   }
 
 onSubmit() {

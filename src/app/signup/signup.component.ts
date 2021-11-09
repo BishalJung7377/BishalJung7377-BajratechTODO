@@ -20,6 +20,14 @@ export class SignupComponent implements OnInit {
     public signupAuth: SignupserviceService,
     public router: Router
   ) { 
+  
+  }
+
+  ngOnInit(): void {
+  this.signupinitialize();
+  }
+
+  signupinitialize(): void{
     this.signupForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(3)]],
       email: ["", [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
@@ -29,13 +37,6 @@ export class SignupComponent implements OnInit {
       date: ["", [Validators.required]],
 
     })
-  }
-
-  ngOnInit(): void {
-  
-  }
-  signupformview():void{
-
   }
  onSubmit() {
     if (this.signupForm.valid) {
