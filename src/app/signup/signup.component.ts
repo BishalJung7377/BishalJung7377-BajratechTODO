@@ -19,9 +19,7 @@ export class SignupComponent implements OnInit {
     private formBuilder: FormBuilder,
     public signupAuth: SignupserviceService,
     public router: Router
-  ) { }
-
-  ngOnInit(): void {
+  ) { 
     this.signupForm = this.formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(3)]],
       email: ["", [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
@@ -33,8 +31,13 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  getSignupData(signupData: any) {
-    console.log(signupData);
+  ngOnInit(): void {
+  
+  }
+  signupformview():void{
+
+  }
+ onSubmit() {
     if (this.signupForm.valid) {
       this.signupAuth.userData = this.signupForm.value;
       localStorage.setItem('usersignupdata', JSON.stringify(this.signupForm.value))
@@ -46,14 +49,13 @@ export class SignupComponent implements OnInit {
   get signupValidData() {
     return this.signupForm.controls
   }
-
-  numericOnly(event: any) {
+  numericOnly(event: { key: string; }): boolean {    
     let patt = /^([0-9])$/;
     let result = patt.test(event.key);
     return result;
-  }
+}
 
-  textOnly(event: any) {
+  textOnly(event: {key : string}): boolean {
     let textpattern = /^([a-z])$/;
     let res = textpattern.test(event.key);
     return res;

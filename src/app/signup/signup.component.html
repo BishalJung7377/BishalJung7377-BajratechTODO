@@ -3,7 +3,7 @@
     <form
       [formGroup]="signupForm"
       #loginFormVali="ngForm"
-      (ngSubmit)="getSignupData(loginFormVali.value)"
+      (ngSubmit)=" onSubmit()"
     >
       <h1 class="title">{{ title }}</h1>
 

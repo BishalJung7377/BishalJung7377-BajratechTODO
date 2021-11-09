@@ -4,7 +4,7 @@
       [formGroup]="loginformvalidation"
       id="loginformvalidation"
       #loginFormVali="ngForm"
-      (ngSubmit)="loginFormData(loginFormVali.value)"
+      (ngSubmit)="onSubmit()"
     >
       <h1 class="title">{{title}}</h1>
 

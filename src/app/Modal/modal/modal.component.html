@@ -7,7 +7,7 @@
     <form
       [formGroup]="NewListTask"
       #newlistform="ngForm"
-      (ngSubmit)="listData(newlistform.value)"
+      (ngSubmit)="onSubmit()"
     >
       <div class="form-group">
         <label for="createlIst">Create New List</label>
@@ -34,7 +34,7 @@
   <button
     [disabled]="!NewListTask.valid"
     class="btn btn-primary"
-    (click)="listData(listData)"
+    (click)="onSubmit()"
   >
     Add Task
   </button>

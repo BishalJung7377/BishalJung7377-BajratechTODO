@@ -19,35 +19,37 @@ export class SignuppasswordComponent implements OnInit {
   logintext = "Login"
   hide = true;
   hidenew = true;
-  npassword: any;
   submit = false;
   newpassword !: string;
   cpassword !: string;
   emailSent = "Email has been sent!"
   resetTxt = "Please check your inbox and click in the recieved link to reset password";
 
-
-
-
   constructor(
     private formBuilder: FormBuilder,
     public signupAuth: SignupserviceService,
     public router: Router
-  ) { }
+  ) { 
+
+  }
 
   ngOnInit(): void {
-    this.PasswordForm = this.formBuilder.group({
-      newpassword: ['',
-        [Validators.required,
-        Validators.minLength(8),
-        passwordupperCase(),
-        specialeChars(),
-        numericPass()
-        ]
-      ],
-      cpassword: ['', [Validators.required],]
-    }, { validators: Validateconfirmpassword() })
+   this.passsworfFormView()
   }
+passsworfFormView(): void{
+  this.PasswordForm = this.formBuilder.group({
+    newpassword: ['',
+      [Validators.required,
+      Validators.minLength(8),
+      passwordupperCase(),
+      specialeChars(),
+      numericPass()
+      ]
+    ],
+    cpassword: ['', [Validators.required],]
+  }, { validators: Validateconfirmpassword() })
+}
+
   get nepassword() {
     return this.PasswordForm.get('newpassword');
   }
@@ -56,8 +58,7 @@ export class SignuppasswordComponent implements OnInit {
     return this.PasswordForm.get('cpassword');
   }
 
-  setPassword(passwordData: any) {
-    console.log(passwordData);
+  onSubmit() {
 
     if (this.PasswordForm.valid) {
       this.signupdata = this.signupAuth.userData

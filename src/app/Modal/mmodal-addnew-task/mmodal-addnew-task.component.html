@@ -6,7 +6,7 @@
     </button>
   </div>
   <div class="modal-body">
-   <form [formGroup]="TaskForm" #taskform="ngForm" (onSubmit)="taskformsubmit(taskform.value)">
+   <form [formGroup]="TaskForm" #taskform="ngForm" (onSubmit)="onSubmit()">
    <div class="form-group">
     <label for="createlIst">Create New Task</label>
     <input
@@ -64,7 +64,7 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-secondary" (click)="modalRef.close('cancel click')">Cancel</button>
-    <button type="button"  (click)="taskformsubmit(taskform.value)"class="btn btn-danger" (click)="modalRef.close('Ok click')" [disabled]="!TaskForm.valid">Save</button>
+    <button type="button"  (click)="onSubmit()"class="btn btn-danger" (click)="modalRef.close('Ok click')" [disabled]="!TaskForm.valid">Save</button>
   </div>
 
   

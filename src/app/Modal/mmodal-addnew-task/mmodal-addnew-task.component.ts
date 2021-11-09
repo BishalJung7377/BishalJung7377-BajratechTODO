@@ -26,22 +26,26 @@ export class MmodalAddnewTaskComponent implements OnInit {
   
   constructor(public modalRef: MdbModalRef<MmodalAddnewTaskComponent>,
     private formBuilder: FormBuilder,
-    private taskAuth: TaskService) { }
+    private taskAuth: TaskService) {
+
+      this.TaskForm = this.formBuilder.group({
+        taskName: ["",[Validators.required]],
+        listName:["",[Validators.required]],
+        priority:["",[Validators.required]],
+        date: ["", [Validators.required]],
+      })
+     }
 
   ngOnInit(): void {
-    this.TaskForm = this.formBuilder.group({
-      taskName: ["",[Validators.required]],
-      listName:["",[Validators.required]],
-      priority:["",[Validators.required]],
-      date: ["", [Validators.required]],
-    })
+ 
   }
+
+  
   get formValidation(){
     return this.TaskForm.controls
   }
 
-  taskformsubmit(taskdata: any) {
-    console.log(taskdata );
+  onSubmit() {
     if(this.TaskForm.valid){
       this.taskAuth.createTask(this.TaskForm.value.taskName,
         this.TaskForm.value.listName,

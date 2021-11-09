@@ -11,11 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(
-    public loginAuth: APIServiceService,
-    private formBuilder: FormBuilder,
-    private router: Router
-    ) { }
+
 
 
   loginformvalidation!: FormGroup
@@ -35,16 +31,21 @@ export class LoginComponent implements OnInit {
   password !: string;
   submitted = false;
   valid = false;
-
+  constructor(
+    public loginAuth: APIServiceService,
+    private formBuilder: FormBuilder,
+    private router: Router
+    ) { 
+      this.loginformvalidation = this.formBuilder.group({
+        email: ["", [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+        password: ["", [Validators.required, Validators.minLength(4)]]
+      })
+    }
   ngOnInit(): void {
-    this.loginformvalidation = this.formBuilder.group({
-      email: ["", [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      password: ["", [Validators.required, Validators.minLength(4)]]
-    })
+   
   }
 
-  loginFormData(userdata: any) {
-    console.log(userdata);
+onSubmit() {
     this.loginAuth.userLogin(this.loginformvalidation.get('email')?.value,
       this.loginformvalidation.get('password')?.value)
       .subscribe(

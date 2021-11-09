@@ -7,37 +7,32 @@ import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   // styleUrls: ['./modal.component.css']
-  styleUrls: ['../modal/Scss/modal.component.scss']
+  styleUrls: ['../modal/Scss/modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  NewListTask!: FormGroup
-  
-  constructor(public modalRef: MdbModalRef<ModalComponent>,
+  NewListTask!: FormGroup;
+
+  constructor(
+    public modalRef: MdbModalRef<ModalComponent>,
     private formBuilder: FormBuilder,
     private modalAuth: ListService
-    ) { }
-
-  ngOnInit(): void {
+  ) {
     this.NewListTask = this.formBuilder.group({
-      ListName:["",[Validators.required]]
-    })
+      ListName: ['', [Validators.required]],
+    });
   }
 
+  ngOnInit(): void {}
 
-  listData(listdata: any) {
-    console.log(listdata);
+  onSubmit() {
     if (this.NewListTask.valid) {
-    this.modalAuth.createList(this.NewListTask.value.ListName)
-    .subscribe(
-      (response)=>{
-        console.log(response);
-      }
-    )
+      this.modalAuth
+        .createList(this.NewListTask.value.ListName)
+        .subscribe((response) => {
+          console.log(response);
+        });
+    } else {
+      console.log('Error');
     }
-    else{
-      console.log("Error");
-      
-    }
-   
   }
 }
