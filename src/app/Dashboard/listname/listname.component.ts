@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from 'src/app/Modal/modal/modal.component';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { TaskService } from 'src/app/services/TaskServices/task.service';
 
 @Component({
   selector: 'app-listname',
@@ -18,18 +19,26 @@ export class ListnameComponent implements OnInit {
   modalRef!: MdbModalRef<ModalComponent>;
   listData: any = [];
   listCounter: number = 0;
+  taskData:any=[]
+
   constructor(
     private formBuilder: FormBuilder,
     config: NgbModalConfig,
     private modal: NgbModal,
     private _modalService: NgbModal,
     private modalService: MdbModalService,
-    private ListDataName: ListService
+    private ListDataName: ListService,
+    private showTaskAUth: TaskService
   ) {
     this.ListDataName.displayList().subscribe((response: any) => {
       this.listData = response;
       (this.listCounter = this.listData.length), console.log(this.listCounter);
     });
+    this.showTaskAUth.showTask().subscribe((response:any)=>{
+      this.taskData = response
+      console.log(this.taskData);
+      
+    })
   }
   ngOnInit(): void {}
   open(content: any) {

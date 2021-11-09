@@ -24,17 +24,16 @@
           </div>
         
         <div class="listtask" *ngIf="!collapse" >
-        <div class="content" *ngFor= "let item of listData"  >
+        <div class="content" *ngFor= "let item of taskData"  >
           <div class=" listcontainer">
               <h3 class="chkbox"  > 
-                <mat-checkbox ></mat-checkbox> {{item.id}}</h3>
-              <h3 class="subtitle">{{item.taskname}}</h3>
-              <h3 class="subtitle" >223</h3>
+                <mat-checkbox ></mat-checkbox> {{item.TaskName}}</h3>
+              <h3 class="subtitle">{{item.Priority}}</h3>
+              <h3 class="subtitle" >{{item.Date.year}}</h3>
           </div>
           <mat-divider></mat-divider>
         </div>
         </div>
-        <mat-divider class= list>  </mat-divider>
         </div>
       </div>
     </div>
