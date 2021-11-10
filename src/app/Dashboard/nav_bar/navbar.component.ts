@@ -5,21 +5,15 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
   // styleUrls: ['../navbar/Scss/navbar.component.scss']
-
 })
 export class NavbarComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(
-    private router: Router
-  ) { }
-
-  ngOnInit(): void {
-  }
-  logout(){
+  ngOnInit(): void {}
+  logout() {
     localStorage.clear();
-      this.router.navigate(['/'])
-    }
+    this.router.navigate(['/']);
   }
-
+}

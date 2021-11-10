@@ -16,3 +16,16 @@ export interface userLogin{
 }
 
 
+export interface list{
+    ListName: string;
+}
+
+
+export interface task{
+    ListName:String;
+    TaskName: string;
+    Priority: string;
+    Date: string;
+    year: string;
+}
+

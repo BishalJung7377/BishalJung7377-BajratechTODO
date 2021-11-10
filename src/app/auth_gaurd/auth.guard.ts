@@ -8,11 +8,9 @@ import { APIServiceService } from '../services/apiservice.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-
   constructor(private apiService:APIServiceService,
     private router:Router){
   }
-
   canActivate(): boolean{
     if (this. apiService.loggedIn()){
       return true

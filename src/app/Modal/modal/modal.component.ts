@@ -10,24 +10,23 @@ import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
   styleUrls: ['../modal/Scss/modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  NewListTask!: FormGroup;
+  newListtask!: FormGroup;
 
   constructor(
     public modalRef: MdbModalRef<ModalComponent>,
     private formBuilder: FormBuilder,
     private modalAuth: ListService
   ) {
-    this.NewListTask = this.formBuilder.group({
+    this.newListtask = this.formBuilder.group({
       ListName: ['', [Validators.required]],
     });
   }
 
   ngOnInit(): void {}
-
   onSubmit() {
-    if (this.NewListTask.valid) {
+    if (this.newListtask.valid) {
       this.modalAuth
-        .createList(this.NewListTask.value.ListName)
+        .createList(this.newListtask.value.ListName)
         .subscribe((response) => {
           console.log(response);
         });
